@@ -1,0 +1,86 @@
+:root {
+  --bg-canvas: #f6f2ea;
+  --bg-surface: #ffffff;
+  --bg-tray: #eee8db;
+  --bg-well: #f8f5ef;
+  --ink-primary: #1d211f;
+  --ink-secondary: #525753;
+  --ink-muted: #7a7e77;
+  --border-hairline: #dfd7c8;
+  --border-strong: #c6bcab;
+  --accent-primary: #c6551e;
+  --accent-primary-hover: #ab4514;
+  --accent-primary-tint: #fbf0e8;
+  --accent-secondary: #22685b;
+  --accent-secondary-hover: #1a5247;
+  --accent-secondary-tint: #eaf4f1;
+  --danger: #b5342b;
+  --danger-tint: #fbeeed;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-card: 0 1px 2px rgba(29, 33, 31, 0.05), 0 4px 14px rgba(29, 33, 31, 0.04);
+  --shadow-modal: 0 18px 46px rgba(22, 24, 22, 0.22);
+
+  --font-sans: 'Zen Kaku Gothic New', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
