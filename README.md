@@ -42,28 +42,36 @@ MacBook Pro 上で制作中の「にゃんこ探しゲーム（15匹の猫が登
    - `ANTIGRAVITY_PROMPT.md`（そのまま Antigravity 2.0 に貼り付けてゲームへ組み込めるプロンプト＋React/Canvasコード例）
    - オプションで「左右反転ペア」も一括同梱できます。
 
+## MacBook Air / MacBook Pro での使い方
+
+MacBook Air や MacBook Pro で使う方法は、目的に合わせて **3通り** あります。
+
+### 方法1：インストール不要・1秒で起動（Node.js 不要）
+フォルダ内にある **`Nyanko_Sprite_Studio.html` をダブルクリック** してブラウザ（Safari または Chrome）で開くだけで、インストール作業なしに今すぐ全機能（サンプル猫、透過スプライト切り出し、足元揃え、プレスト再生テスト、和室ドラッグ移動、透過GIF生成、全部入りZIP書き出し、0円手動連携）が動作します。
+
 ---
 
-## MacBook Pro でのセットアップ・起動手順
+### 方法2：Finder からダブルクリックで起動（Mac用ランチャー）
+Node.js がインストールされている環境では、フォルダ内の **`start-mac.command` をダブルクリック** するだけで自動的に依存ライブラリのチェック・インストール・サーバー起動を行い、ブラウザで `http://localhost:5173` を自動で開きます。
 
-必要な環境：Node.js 20 LTS 以上
+---
+
+### 方法3：ターミナルから起動（開発者向け）
+Node.js 20 LTS 以上がインストールされている環境で、ターミナルから以下を実行します：
 
 ```bash
 # 1. リポジトリを取得して移動
-git clone <YOUR_REPO_URL>
+git clone https://github.com/raio700800-hash/nyanko-sprite-studio.git
 cd nyanko-sprite-studio
 
 # 2. パッケージをインストール
 npm install
 
-# 3. APIキーを .env で管理したい場合（任意：画面上の「API設定」からも設定可能）
-cp .env.example .env
-
-# 4. 開発サーバー起動（フロント Vite + ローカルAPIプロキシを同時起動）
+# 3. 開発サーバー起動（フロント Vite + ローカルAPIプロキシを同時起動）
 npm run dev
 ```
 
-ブラウザで `http://localhost:5173` を開くと、最初から **サンプル三毛猫「ミケ」の3面図・8コマ歩行シート・和室背景** が読み込まれた状態で起動します。
+起動後、MacBook のブラウザで `http://localhost:5173` を開いてください。
 
 ### ビルド・本番起動・チェックコマンド
 
